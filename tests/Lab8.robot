@@ -15,5 +15,7 @@ Open Login page
     ...    options=${options}
     ...    executable_path=/usr/bin/chromedriver
 
-    Title Should Contain    Computing
+    ${title}=    Get Title
+    Should Contain    ${title}    Computing
+
     Close Browser
