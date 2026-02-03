@@ -10,3 +10,19 @@ Open Browser To Login Page
     
     Create Webdriver    Chrome    options=${chrome_options}
     Go To    https://computing.kku.ac.th
+
+*** Test Cases ***
+Test Open Browser Successfully
+    Open Browser To Login Page
+    Title Should Be    Computing KKU
+    Close Browser
+
+Test Browser Opens With Correct URL
+    Open Browser To Login Page
+    Location Should Be    https://computing.kku.ac.th
+    Close Browser
+
+Test Page Content Loads
+    Open Browser To Login Page
+    Page Should Contain Element    css=body
+    Close Browser
